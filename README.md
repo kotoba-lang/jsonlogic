@@ -1,5 +1,7 @@
 # jsonlogic-clj (ルール評価)
 
+[![CI](https://github.com/kotoba-lang/jsonlogic/actions/workflows/ci.yml/badge.svg)](https://github.com/kotoba-lang/jsonlogic/actions/workflows/ci.yml)
+
 Evaluate **JSONLogic rules-as-data** in portable Clojure — every namespace is `.cljc`,
 with **zero third-party runtime deps**, so it runs on the JVM, ClojureScript, and
 Clojure-on-WASM hosts (SCI). A rule is a plain string-keyed map (as returned by any
