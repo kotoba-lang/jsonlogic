@@ -1,4 +1,4 @@
-# jsonlogic-clj (ルール評価)
+# kotoba-lang/jsonlogic
 
 [![CI](https://github.com/kotoba-lang/jsonlogic/actions/workflows/ci.yml/badge.svg)](https://github.com/kotoba-lang/jsonlogic/actions/workflows/ci.yml)
 
@@ -8,17 +8,15 @@ Clojure-on-WASM hosts (SCI). A rule is a plain string-keyed map (as returned by 
 JSON parser); it evaluates against a data map or vector. The library adds the operator
 evaluator, structural validation, and a host-injectable custom-operator protocol.
 
-Sibling of the other reusable `*-clj` kernels in this org
-([bpmn-clj](https://github.com/com-junkawasaki/bpmn-clj),
-[dmn-clj](https://github.com/com-junkawasaki/dmn-clj)).
+Sibling of other reusable kotoba-lang contract kernels such as
+[`kotoba-lang/bpmn`](https://github.com/kotoba-lang/bpmn) and
+[`kotoba-lang/dmn`](https://github.com/kotoba-lang/dmn).
 
-## Why a shared library (org placement)
+## Why a shared library
 
-Per the three-org rule, the **reusable** rule evaluator lives in **com-junkawasaki**;
-**public-benefit actor instances** that apply rules in production reasoning pipelines
-live in **etzhayyim**; any **business/private deployment** (pricing, eligibility, access
-control, routing) lives in **gftdcojp**. jsonlogic-clj is the dep — it carries no
-domain rules and no engine bindings (custom operators are host-injected ports).
+The reusable rule evaluator lives in `kotoba-lang/jsonlogic`. It carries no
+domain rules and no engine bindings; custom operators remain host-injected
+ports.
 
 ## The evaluator: rules as data (`jsonlogic.core`)
 
@@ -129,5 +127,5 @@ call `apply-logic` which wires it in automatically:
 ## Test
 
 ```
-clojure -X:test
+clojure -M:test
 ```
