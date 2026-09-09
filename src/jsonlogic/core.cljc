@@ -4,7 +4,7 @@
 
   `apply-logic` — pure evaluator; built-in operators only. Throws on unknown ops.
   `run`         — ports-enabled evaluator; dispatches unknown ops to the host IOp."
-  (:require [clojure.string  :as str]
+  (:require [kotoba.lang.text  :as str]
             [jsonlogic.ports :as p]))
 
 ;; ---------------------------------------------------------------------------
