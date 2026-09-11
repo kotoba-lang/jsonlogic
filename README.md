@@ -127,5 +127,5 @@ call `apply-logic` which wires it in automatically:
 ## Test
 
 ```
-clojure -M:test
+kbb -M:test
 ```
